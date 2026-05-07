@@ -1,0 +1,105 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1976d2">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Target Tahunan</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Target Tahunan</h1>
+      <p>Kelola tabungan impianmu</p>
+    </div>
+
+    <!-- CARD TARGET -->
+    <div class="target-card">
+
+      <div class="top-info">
+        <div>
+          <span class="label">Total Tabungan</span>
+          <h2 id="totalTabungan">Rp0</h2>
+        </div>
+
+        <div class="percent-circle">
+          <span id="persen">0%</span>
+        </div>
+      </div>
+
+      <div class="target-info">
+        <p>Target :</p>
+        <h3 id="targetDisplay">Rp10.000.000</h3>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="progress-box">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="bottom-info">
+        <span>Sisa</span>
+        <strong id="sisaTarget">Rp10.000.000</strong>
+      </div>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+
+      <input type="number" id="nominal"
+      placeholder="Masukkan nominal">
+      
+      <button type="button" onclick="tambahTabungan()">
+  Tambah Tabungan
+</button>
+
+    </div>
+
+    <!-- LIST -->
+    <div class="list-card">
+
+      <div class="list-header">
+        <h3>Riwayat Tabungan</h3>
+      </div>
+      
+      <button class="pdf-btn"
+onclick="downloadPDF()">
+  Download PDF
+</button>
+
+      <div id="listTabungan"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  
+  <script>
+
+if("serviceWorker" in navigator){
+
+  navigator.serviceWorker.register(
+    "./service-worker.js"
+  );
+
+}
+
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
