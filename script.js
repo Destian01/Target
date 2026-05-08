@@ -78,18 +78,18 @@ tambahBtn.addEventListener("click", () => {
   tanggal.getFullYear();
 
   dataTabungan.push({
-    nominal: nominal,
-    bulan: bulan
-  });
+  nominal: nominal,
+  bulan: bulan
+});
 
-  localStorage.setItem(
-    "tabungan",
-    JSON.stringify(dataTabungan)
-  );
+localStorage.setItem(
+  "tabungan",
+  JSON.stringify(dataTabungan)
+);
 
-  nominalInput.value = "";
+nominalInput.value = "";
 
-  render();
+render();
 
 });
 
