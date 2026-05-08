@@ -42,6 +42,7 @@ function render(){
     "tabungan",
     JSON.stringify(dataTabungan)
   );
+  render();
 }
 
 tambahBtn.addEventListener("click", () => {
