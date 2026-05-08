@@ -87,3 +87,5 @@ tambahBtn.addEventListener("click", () => {
 });
 
 render();
+
+console.log(localStorage.getItem("tabungan"));
