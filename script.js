@@ -39,10 +39,10 @@ function render(){
   formatRupiah(total);
 
   localStorage.setItem(
-    "tabungan",
-    JSON.stringify(dataTabungan)
-  );
-  render();
+  "tabungan",
+  JSON.stringify(dataTabungan)
+);
+
 }
 
 tambahBtn.addEventListener("click", () => {
@@ -82,9 +82,15 @@ tambahBtn.addEventListener("click", () => {
     bulan: bulan
   });
 
+  localStorage.setItem(
+    "tabungan",
+    JSON.stringify(dataTabungan)
+  );
+
   nominalInput.value = "";
 
   render();
+
 });
 
 render();
